@@ -63,7 +63,7 @@ jobs:
           # SETUP_EXTRA_OPTS: --copy-from "${{ github.repository }}:${{ github.event.repository.default_branch }}"
           SC_CLIENT_VERSION: 24.4.1
           DO_PACKAGE_DEBUG: true
-          PACKAGE_EXTRA_OPTS: -oss -bt mvn
+          PACKAGE_EXTRA_OPTS: -bt msbuild -bf IWA.NET.sln -oss
           # FOD_SAST_SCAN_EXTRA_OPTS:
           DO_WAIT: true
           # DO_POLICY_CHECK: true
