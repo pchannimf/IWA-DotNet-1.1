@@ -35,15 +35,6 @@ jobs:
       - name: Setup MS Build
         uses: microsoft/setup-msbuild@v1.1
 
-      # Java is required to run the various Fortify utilities.
-      # When scanning a Java application, please use the appropriate Java version for building your application.
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          java-version: 17
-          distribution: 'zulu'
-          cache: maven
-
       - name: Run Fortify on Demand SAST & SCA Scan
         uses: fortify/github-action@v2
         with:
